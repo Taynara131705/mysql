@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Estudantes</title>
+</head>
+<body>
+    <h1>Lista de Estudantes</h1>
+    <table border="1" width="100%">
+        <tr>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Ação</th>
+ 
+        </tr>
+ 
+        <% if (estudante.length > 0) {  %>
+            <% for(var i = 0; i < estudante.length; i++) { %>
+                <tr>
+                    <td><%-estudante[i].id %></td>
+                    <td><%-estudante[i].nomecompleto %></td>
+                    <td><%-estudante[i].email %></td>
+                    <td><a href="/delete-estudante?id= <%- estudante[i].id %>" >Excluir</a></td>
+                    <td><a href="/update-estudante?id= <%- estudante[i].id %>" >Alterar</a></td>
+                </tr>
+                <% } %>
+ 
+                <% } else { %>
+                    <h1>Não temos estudantes no Banco de Dados</h1>
+            <% } %>
+    </table>
+</body>
+</html>

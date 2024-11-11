@@ -1,0 +1,9 @@
+<h1>Alterar Cadastro</h1>
+<form action="" method="POST">
+    <input type="hidden" name="id" value="<%= estudante.id %>">
+    <input type="text" name="nomecompleto" value="<%= estudante.nomecompleto %>" placeholder="Insira o seu nome completo" required><br><br>
+    <input type="email" name="email" value="<%= estudante.email %>" placeholder="Insira seu e-mail"required><br><br>
+    <input type="password" name="senha" value="<%= estudante.senha %>" placeholder="Insira a sua senha"required><br><br>
+ 
+    <input type="submit" value="Enviar">
+</form>
